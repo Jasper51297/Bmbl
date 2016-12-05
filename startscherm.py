@@ -25,10 +25,10 @@ class Input(wx.Panel):
         
  
     def TextCtrl(self):
-        self.dnainput = wx.TextCtrl(self)
-        self.startinput = wx.TextCtrl(self)
-        self.stopinput = wx.TextCtrl(self)
-        self.pcrlen = wx.TextCtrl(self)
+        self.dnainput = wx.TextCtrl(self, value = 'ACGTACCCAATTGGACTAGACTAGACTATAAGAATAGA')
+        self.startinput = wx.TextCtrl(self, value = '5')
+        self.stopinput = wx.TextCtrl(self, value = '20')
+        self.pcrlen = wx.TextCtrl(self, value =  '9')
         
  
     def BoxMaken(self):
