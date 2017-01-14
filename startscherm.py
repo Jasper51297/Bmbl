@@ -13,8 +13,9 @@ class Input(wx.Panel):
         self.SetSizer(finalbox)
  
     def KnopMaken(self):
-        self.knopstart = wx.Button(self, -1, "Start")
-        self.knopstop = wx.Button(self, -1, "Stop")
+        self.knopstart = wx.Button(self, -1, "Calculate")
+        self.knopstop = wx.Button(self, -1, "End")
+	self.knophelp = wx.Button(self, -1, "Help")
         
  
     def TekstMaken(self):
@@ -25,10 +26,10 @@ class Input(wx.Panel):
         
  
     def TextCtrl(self):
-        self.dnainput = wx.TextCtrl(self, value = 'ACGTACCCAATTGGACTAGACTAGACTATAAGAATAGA')
-        self.startinput = wx.TextCtrl(self, value = '5')
-        self.stopinput = wx.TextCtrl(self, value = '20')
-        self.pcrlen = wx.TextCtrl(self, value =  '9')
+        self.dnainput = wx.TextCtrl(self, value = '')
+        self.startinput = wx.TextCtrl(self, value = '')
+        self.stopinput = wx.TextCtrl(self, value = '')
+        self.pcrlen = wx.TextCtrl(self, value =  '')
         
  
     def BoxMaken(self):
@@ -38,7 +39,8 @@ class Input(wx.Panel):
                                         center(self.tekst3), self.stopinput,
                                         center(self.tekst4),
                                         self.pcrlen], [1,2,1,2,1,2])
-        hbox4 = BoxVorm(wx.HORIZONTAL, [self.knopstop, self.knopstart], [1,1])
+        hbox4 = BoxVorm(wx.HORIZONTAL, [self.knopstop, self.knopstart,
+                                        self.knophelp], [1,1,1])
         vbox1 = BoxVorm(wx.VERTICAL, [hbox1, hbox2, hbox3, hbox4], [1,4,2,1])
         return vbox1
  
